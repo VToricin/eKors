@@ -1,0 +1,300 @@
+.footer {
+  width: 1024px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 780px) {
+  .footer {
+    width: 97%;
+  }
+}
+.footer__container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 780px) {
+  .footer__container {
+    width: 100%;
+  }
+}
+.footer__container a {
+  display: flex;
+  justify-content: left;
+}
+.footer__container p {
+  text-align: left;
+  margin: 3px 0px;
+}
+
+.header {
+  position: fixed;
+  width: 1024px;
+  height: 120px;
+  background-color: white;
+  border-radius: 0px 0px 7px 7px;
+  box-shadow: 0 1px 6px 0 rgba(165, 165, 167, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  /* .leftSidePart{
+
+
+
+  } */
+}
+@media (max-width: 1024px) {
+  .header {
+    width: 98%;
+    height: 100px;
+  }
+}
+.header__sidePart {
+  width: 70px;
+}
+.header .header__logo {
+  position: relative;
+  /* #logo{
+      position: absolute;
+      bottom: -37px;
+      left: 8px;
+      transform: rotate(270deg);
+      width: 90px;
+      height: 40px;
+      display: flex;
+      border: 1px solid #737373;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border-radius: 4px;
+      background: white;
+      @media (max-width:$widthPhone) {
+
+          bottom: -28px;
+          left: 0px;
+
+      }
+
+  } */
+}
+.header .rightSidePart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .header__navigation {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__mainName p {
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 35px;
+}
+@media (max-width: 780px) {
+  .header__mainName p {
+    font-size: 25px;
+  }
+}
+.header__logo {
+  position: absolute;
+}
+.header #basket {
+  background-image: url(./basket2.png);
+  background-position: center;
+  background-size: contain;
+}
+.header .header__menu {
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: rgb(54, 54, 54);
+}
+.header #menuFirst {
+  position: absolute;
+  bottom: 16px;
+}
+.header #menuMiddle {
+  position: absolute;
+  bottom: 12px;
+}
+.header #menuSecond {
+  position: absolute;
+  bottom: 8px;
+}
+
+.pictureCatalog {
+  width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 125px;
+  box-sizing: border-box;
+}
+@media (max-width: 780px) {
+  .pictureCatalog {
+    width: 97%;
+    margin-top: 105px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.categoryCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 10px solid white;
+  border-radius: 7px;
+  background-color: white;
+  margin-top: 10px;
+  box-shadow: 0 0px 6px 0 rgba(61, 61, 61, 0.11);
+}
+@media (max-width: 780px) {
+  .categoryCard {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.categoryCard img {
+  width: 100%;
+  border-radius: 4px;
+}
+.categoryCard p {
+  font-family: "Coda", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 25px;
+  color: rgb(77, 77, 77);
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.workshop {
+  position: relative;
+  width: 1024px;
+}
+@media (max-width: 780px) {
+  .workshop {
+    width: 100%;
+  }
+}
+.workshop__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+@media (max-width: 780px) {
+  .workshop__container {
+    flex-direction: column;
+  }
+}
+.workshop__imagesContainer {
+  width: 60%;
+  border-radius: 7px;
+  height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 780px) {
+  .workshop__imagesContainer {
+    width: 97%;
+    height: 300px;
+  }
+}
+.workshop__imagesDescription {
+  width: 30%;
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 25px;
+  text-align: right;
+}
+@media (max-width: 780px) {
+  .workshop__imagesDescription {
+    width: 90%;
+    height: none;
+    text-align: center;
+  }
+}
+.workshop__name {
+  margin: 40px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 35px;
+}
+.workshop #secondWorkshopContainer {
+  flex-direction: row-reverse;
+}
+@media (max-width: 780px) {
+  .workshop #secondWorkshopContainer {
+    flex-direction: column;
+  }
+}
+.workshop #secondWorkshopContainer p {
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .workshop #secondWorkshopContainer p {
+    text-align: center;
+  }
+}
+
+.goods {
+  margin-top: 120px;
+}
+.goods__container {
+  width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 780px) {
+  .goods__container {
+    width: 98%;
+    flex-direction: column;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(252, 250, 250);
+  margin: 0px;
+}
+
+.catalog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-family: "Coda", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 25px;
+  color: rgb(77, 77, 77);
+}/*# sourceMappingURL=index.css.map */

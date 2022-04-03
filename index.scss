@@ -1,0 +1,33 @@
+$widthDesktop:1024px;
+$widthPhone:780px;
+$fontFamilyMain: 'Alumni Sans', sans-serif;
+
+
+@import './footer/footer.scss';
+@import './header/header.scss';
+@import './catalog/catalog.scss';
+@import './workshop/workshop.scss';
+@import './goods/goods.scss';
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(252, 250, 250);
+    margin: 0px;
+}
+.catalog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+        
+    font-family: 'Coda', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: $fontFamilyMain;
+    font-size: 25px;
+    color: rgb(77, 77, 77);
+
+}

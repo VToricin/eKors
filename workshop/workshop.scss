@@ -1,0 +1,74 @@
+.workshop{
+    position: relative;
+    width: $widthDesktop;  
+    
+
+    @media (max-width:$widthPhone) {
+        width: 100%;            
+    }
+    
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        @media (max-width:$widthPhone){
+            flex-direction: column;
+        }
+
+    }
+    &__imagesContainer{
+        width:60%;
+        border-radius: 7px;
+        height: 420px;
+        object-fit: cover;
+        @media (max-width:$widthPhone){
+            width: 97%;
+            height: 300px;
+        }
+    }
+
+    &__imagesDescription{
+        width: 30%;
+        font-family: 'Inter', sans-serif;
+        font-family: $fontFamilyMain;
+        font-size: 25px;
+        text-align: right;
+        @media (max-width:$widthPhone){
+            width: 90%;
+            height: none;
+            text-align: center;
+        }
+    }
+
+    &__name{
+        margin: 40px 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        font-family: $fontFamilyMain;
+        font-size: 35px;
+    }
+
+    #secondWorkshopContainer{
+        flex-direction: row-reverse;
+        @media (max-width:$widthPhone){
+            flex-direction: column;
+        }
+
+        p{
+            text-align: left;
+            @media (max-width:$widthPhone){
+                
+                text-align: center;
+        }
+        }
+
+    }
+
+
+    
+}

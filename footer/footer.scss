@@ -1,0 +1,32 @@
+.footer{
+    width: $widthDesktop;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:$widthPhone){
+        width: 97%;
+    }
+
+    &__container{
+        width: 80%;
+        display:flex;
+        
+        justify-content: space-around;    
+        @media (max-width:$widthPhone){
+            width: 100%;
+        }
+
+        a{
+            display: flex;
+            justify-content: left;
+        }
+
+        p{
+            text-align: left;
+            margin: 3px 0px;
+        }
+    }
+    
+}
