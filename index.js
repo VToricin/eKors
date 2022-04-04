@@ -1,8 +1,8 @@
 
 const pictureCatalog = document.querySelector('.pictureCatalog');
 const footerGategories = document.querySelector('.footer__categories');
-
-
+const menuMenu = document.querySelector('.menuMenu');
+const naviButton = document.querySelector('#naviButton');
 
 
 
@@ -35,16 +35,26 @@ function categoryFooterBuilder (props) {
     footerCategoryName.classList.add('footer__text');
 
     footerCategoryHref.appendChild(footerCategoryName);
+
+    const menuCloneUnit = footerCategoryHref.cloneNode(true); 
+    menuMenu.appendChild(menuCloneUnit);
     footerGategories.appendChild(footerCategoryHref);
+
+
+    
 
 }
 
 Object.keys(allGoods).map(el=>{
     catgoryCardBuilder(allGoods[el]);
     categoryFooterBuilder(allGoods[el]);
+    
 });
 
-
+naviButton.addEventListener('click', function(){
+    menuMenu.classList.toggle('openedMenu')
+    }
+)
  
 
 
