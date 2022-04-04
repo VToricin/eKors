@@ -120,7 +120,7 @@
     }
 
     .header__menu {
-        position: absolute;
+        
         width: 20px;
         height: 1px;
         background-color: rgb(54, 54, 54);
@@ -129,14 +129,32 @@
     #menuFirst{
         position: absolute;
         bottom: 16px;
+        transition: 300ms ease;
+        &.openedMenu{
+            transform: rotate(45deg);
+            top: 12px;
+            transition: 300ms ease;
+        }
     }
     #menuMiddle{
         position: absolute;
         bottom: 12px;
+        transition: 100ms ease;
+        
+        &.openedMenu{
+            height: 0px;
+            transition: 100ms ease;
+        }
     }
     #menuSecond{
         position: absolute;
         bottom: 8px;
+        transition: 300ms ease;
+        &.openedMenu{
+            transform: rotate(-45deg);
+            top: 12px;
+            transition: 300ms ease;
+        }
     }
 
     
@@ -151,18 +169,31 @@
         top: -100%;
         position: absolute;
         z-index: 10;
+        @media (max-width:$widthDesktop) {
+            flex-direction: column;
+            height: fit-content;
+            p{
+                margin: 10px 0px;
+            }
+        }
+        
         p{
             margin: 0px 10px;
         }
         
         &.openedMenu {
-            height: fit-content;
+            
             transition: 300ms ease;
             top: 100px;
-            flex-direction: column;
-            p{
-                margin: 10px 0px;
+            @media (max-width:$widthDesktop) {
+                flex-direction: column;
+                height: fit-content;
+                p{
+                    margin: 10px 0px;
+                }
             }
+            
+            
                 
         }
 

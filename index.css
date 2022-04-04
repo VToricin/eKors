@@ -131,7 +131,6 @@
   background-size: contain;
 }
 .header .header__menu {
-  position: absolute;
   width: 20px;
   height: 1px;
   background-color: rgb(54, 54, 54);
@@ -139,14 +138,31 @@
 .header #menuFirst {
   position: absolute;
   bottom: 16px;
+  transition: 300ms ease;
+}
+.header #menuFirst.openedMenu {
+  transform: rotate(45deg);
+  top: 12px;
+  transition: 300ms ease;
 }
 .header #menuMiddle {
   position: absolute;
   bottom: 12px;
+  transition: 100ms ease;
+}
+.header #menuMiddle.openedMenu {
+  height: 0px;
+  transition: 100ms ease;
 }
 .header #menuSecond {
   position: absolute;
   bottom: 8px;
+  transition: 300ms ease;
+}
+.header #menuSecond.openedMenu {
+  transform: rotate(-45deg);
+  top: 12px;
+  transition: 300ms ease;
 }
 .header .menuMenu {
   background-color: white;
@@ -160,19 +176,34 @@
   position: absolute;
   z-index: 10;
 }
+@media (max-width: 1024px) {
+  .header .menuMenu {
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header .menuMenu p {
+    margin: 10px 0px;
+  }
+}
 .header .menuMenu p {
   margin: 0px 10px;
 }
 .header .menuMenu.openedMenu {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   transition: 300ms ease;
   top: 100px;
-  flex-direction: column;
 }
-.header .menuMenu.openedMenu p {
-  margin: 10px 0px;
+@media (max-width: 1024px) {
+  .header .menuMenu.openedMenu {
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header .menuMenu.openedMenu p {
+    margin: 10px 0px;
+  }
 }
 
 .pictureCatalog {

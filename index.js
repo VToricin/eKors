@@ -3,6 +3,8 @@ const pictureCatalog = document.querySelector('.pictureCatalog');
 const footerGategories = document.querySelector('.footer__categories');
 const menuMenu = document.querySelector('.menuMenu');
 const naviButton = document.querySelector('#naviButton');
+const menuFirst = document.getElementById('menuFirst');
+const menuSecond = document.getElementById('menuSecond');
 
 
 
@@ -52,7 +54,10 @@ Object.keys(allGoods).map(el=>{
 });
 
 naviButton.addEventListener('click', function(){
-    menuMenu.classList.toggle('openedMenu')
+    menuMenu.classList.toggle('openedMenu');
+    menuFirst.classList.toggle('openedMenu');
+    menuSecond.classList.toggle('openedMenu');
+    menuMiddle.classList.toggle('openedMenu');
     }
 )
  
