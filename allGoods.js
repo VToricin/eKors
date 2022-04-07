@@ -10,7 +10,7 @@ let allGoods = {
             name: "шапка с отворотом",
             color:"розовая",
             price: 500,
-            pictureURL:"./shapkiOtvorot/images/1.jpg",
+            pictureURL:"./images/blueHat.jpg",
             material1:"хлопок",
             material2:"не хлопок"
     
@@ -20,7 +20,7 @@ let allGoods = {
             name: "шапка с отворотом",
             color:"зеленая",
             price: 700,
-            pictureURL:"./shapkiOtvorot/images/2.jpg",
+            pictureURL:"./images/blueHat.jpg",
             material1:"хлопок",
             material2:"не хлопок"
     
@@ -53,7 +53,53 @@ let allGoods = {
     "Шапки с вязочками":{
         name:"Шапки с вязочками",
         'url': "./повязкиPage",
-        imgURL:"./catalog/images/pinkHat.jpg"
+        imgURL:"./catalog/images/pinkHat.jpg",
+        categoryCatalog:{
+        'shapka1': {
+
+            id:1,
+            name: "шапка с отворотом",
+            color:"розовая",
+            price: 500,
+            pictureURL:"./images/blueHat.jpg",
+            material1:"хлопок",
+            material2:"не хлопок"
+    
+        },
+        'shapka2':{
+            id:2,
+            name: "шапка с отворотом",
+            color:"зеленая",
+            price: 700,
+            pictureURL:"./images/blueHat.jpg",
+            material1:"хлопок",
+            material2:"не хлопок"
+    
+    
+        },
+        'shapka3':{
+            id:3,
+            name: "шапка с отворотом",
+            color:"красная",
+            price: 1500,
+            pictureURL:"./shapkiOtvorot/images/3.jpg",
+            material1:"хлопок",
+            material2:"не хлопок"
+    
+    
+        },
+        'shapka4':{
+            id:4,
+            name: "шапка с отворотом",
+            color:"красная",
+            price: 1500,
+            pictureURL:"./shapkiOtvorot/images/4.jpg",
+            material1:"хлопок",
+            material2:"не хлопок"
+    
+    
+        }
+        }
     },
     "Повязки на голову":{
         name:"Повязки на голову",

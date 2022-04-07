@@ -53,7 +53,7 @@
         font-size: 35px;
     }
 
-    #secondWorkshopContainer{
+    .secondWorkshopContainer{
         flex-direction: row-reverse;
         @media (max-width:$widthPhone){
             flex-direction: column;

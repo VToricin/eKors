@@ -172,7 +172,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -100%;
+  top: -110%;
   position: absolute;
   z-index: 10;
 }
@@ -319,19 +319,19 @@ a {
   font-family: "Alumni Sans", sans-serif;
   font-size: 35px;
 }
-.workshop #secondWorkshopContainer {
+.workshop .secondWorkshopContainer {
   flex-direction: row-reverse;
 }
 @media (max-width: 780px) {
-  .workshop #secondWorkshopContainer {
+  .workshop .secondWorkshopContainer {
     flex-direction: column;
   }
 }
-.workshop #secondWorkshopContainer p {
+.workshop .secondWorkshopContainer p {
   text-align: left;
 }
 @media (max-width: 780px) {
-  .workshop #secondWorkshopContainer p {
+  .workshop .secondWorkshopContainer p {
     text-align: center;
   }
 }
