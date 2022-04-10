@@ -1,0 +1,69 @@
+.cardBackgroundField{
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.686);
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modalCardWindow {
+        width: $widthDesktop;
+        height: 600px;
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+
+
+        
+        @media (max-width:$widthPhone){
+            width: 94%;
+        }
+
+        .closeButton{
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            @media(max-width:$widthPhone){
+                right: -5px;
+            }
+            .sticksContainer{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                .closeStick{
+                    width: 30px;
+                    height: 1px;
+                    background-color: rgb(42, 42, 42);
+                    transform: rotate(-45deg);
+                    position: absolute;
+
+                    &.rotated{
+                        transform: rotate(45deg);
+                    }
+                }
+            } 
+            
+            
+
+        }
+
+
+    }
+
+}

@@ -1,5 +1,7 @@
 .goods{
     margin-top: 120px;
+    display: flex;
+    justify-content: center;
 
     &__container{
     width: $widthDesktop;
@@ -9,6 +11,8 @@
     @media (max-width:$widthPhone){
         width: 98%;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     }
 

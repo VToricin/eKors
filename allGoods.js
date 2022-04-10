@@ -1,7 +1,7 @@
 let allGoods = {
     "Шапки с отворотом":{
         name:"Шапки с отворотом",
-        'url':"./shapkiOtvorot.html",
+        
         imgURL:"./catalog/images/pinkHat.jpg",
         categoryCatalog:{
         'shapka1': {
@@ -12,7 +12,8 @@ let allGoods = {
             price: 500,
             pictureURL:"./images/blueHat.jpg",
             material1:"хлопок",
-            material2:"не хлопок"
+            material2:"не хлопок",
+            "наличие":0
     
         },
         'shapka2':{
@@ -52,7 +53,7 @@ let allGoods = {
     },
     "Шапки с вязочками":{
         name:"Шапки с вязочками",
-        'url': "./повязкиPage",
+        
         imgURL:"./catalog/images/pinkHat.jpg",
         categoryCatalog:{
         'shapka1': {
@@ -103,22 +104,40 @@ let allGoods = {
     },
     "Повязки на голову":{
         name:"Повязки на голову",
-        'url': "./наборыPage",
+        
         imgURL:"./catalog/images/pinkHat.jpg"
     },
     "Банданы":{
         name:"Банданы",
-        'url':"./шпочкиPage",
+        
         imgURL:"./catalog/images/pinkHat.jpg"
     },
     "Панамки":{
         name:"Панамки",
-        'url': "./повязкиPage",
+        
         imgURL:"./catalog/images/pinkHat.jpg"
     },
     "Косынки":{
         name:"Косынки",
-        'url': "./наборыPage",
+        
         imgURL:"./catalog/images/pinkHat.jpg"
     }
 };
+
+let deliveryDetails = {
+    'самовывоз':{
+        name: 'Самовывоз:',
+        howTo: ['г. Ярославль, Торговый центр "Яркий", проспект Машиностроителей, 30 '] 
+        
+    },
+    'по Ярославлю':{
+        name: 'По городу Ярославль:',
+        howTo:['По городу Ярославль доставка осуществляется по договорённости от 200₽ до 400₽ в зависимости от района и дальности.']
+    },
+    'по России':{
+        name: 'По России:',
+        howTo: ['Доставка по России СДЭК от 350₽','Доставка почта России от 300₽']
+    }
+      
+    
+}

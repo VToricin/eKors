@@ -1,0 +1,11 @@
+.cardBackgroundField {
+  top: 0px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.686);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=goodCardComponent.css.map */

@@ -1,10 +1,11 @@
 const spaContainer = document.getElementById('spaContainer'); //изменяемый контейнер для контента
-
+const body = document.querySelector('body');
 const footerGategories = document.querySelector('.footer__categories');
 const menuMenu = document.querySelector('.menuMenu');
 const naviButton = document.querySelector('#naviButton');
 const menuFirst = document.getElementById('menuFirst');
 const menuSecond = document.getElementById('menuSecond');
+const delivery = document.getElementById('delivery');
 
 
 function toggleMenuFunction () {
@@ -50,6 +51,42 @@ Object.keys(allGoods).map(el=>{
     
 });
 
+function deliverySectionBuilder () {
+    spaContainer.innerHTML = '';
+    window.scroll(0,0);
+    let deliverySection = document.createElement('section');
+    deliverySection.classList.add('delivery');
+        
+    Object.keys(deliveryDetails).map(el=>{
+        let deliveryType = document.createElement('div');
+        deliveryType.classList.add('delivery__Type');
+        deliverySection.appendChild(deliveryType);
+        //создание контейнера с типом доставки
+        let deliveryTypeName = document.createElement('p');
+        deliveryTypeName.classList.add('delivery__TypeName');
+        deliveryType.appendChild(deliveryTypeName);
+        deliveryTypeName.innerHTML = deliveryDetails[el].name;
+
+        let deliveryTypeInfoContainer = document.createElement('div');
+
+        for  (let i=0;i<deliveryDetails[el].howTo.length;i++){
+            let deliveryTypeInfo = document.createElement('p');
+            deliveryTypeInfo.innerHTML = deliveryDetails[el].howTo[i];
+            deliveryTypeInfoContainer.appendChild(deliveryTypeInfo);
+        }
+        deliveryType.appendChild(deliveryTypeInfoContainer);
+    })    
+
+    spaContainer.appendChild(deliverySection);
+
+}
+
+delivery.addEventListener('click',function(){
+    toggleMenuFunction();
+    deliverySectionBuilder();
+
+})
+
 /* сверху постороение основных элементов страницы шапка и подвал, не меняются */   
 
 
@@ -75,6 +112,10 @@ function categorySectionBuilder(argu){
         goodCardDiv.appendChild(goodMainPicture);
         goodCardDiv.appendChild(goodName);
         goodCardDiv.appendChild(goodPrice);
+
+        goodCardDiv.addEventListener('click', function(){
+            body.appendChild(goodCardComponent(argu.categoryCatalog[el]));
+        })
 
     })
     
@@ -116,7 +157,7 @@ function workshopSectionBuilder (){
     for (let i=0; i<workshopContentArray.length; i++) {
         let workshop__container = document.createElement('div');
         workshop__container.classList.add('workshop__container');
-        if((i+1)/2==0){
+        if((i+1)%2==0){
             workshop__container.classList.add('secondWorkshopContainer');
         } 
         let workshop__imagesContainer = document.createElement('img');

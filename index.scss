@@ -1,5 +1,5 @@
 $widthDesktop:1024px;
-$widthPhone:780px;
+$widthPhone:820px;
 $fontFamilyMain: 'Alumni Sans', sans-serif;
 
 
@@ -8,6 +8,8 @@ $fontFamilyMain: 'Alumni Sans', sans-serif;
 @import './catalog/catalog.scss';
 @import './workshop/workshop.scss';
 @import './goods/goods.scss';
+@import './goods/goodCardComponent.scss';
+@import './delivery/delivery.scss';
 
 body{
     display: flex;
@@ -30,4 +32,10 @@ p{
     font-size: 25px;
     color: rgb(77, 77, 77);
 
+}
+#spaContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

@@ -1,0 +1,23 @@
+.delivery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    @media(max-width:$widthPhone){
+        width: 90%;
+
+    }
+
+    &__Type{
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    p.delivery__TypeName{
+        font-weight: 700;
+        
+    }
+   
+}
