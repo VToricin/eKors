@@ -2,53 +2,65 @@ let allGoods = {
     "Шапки с отворотом":{
         name:"Шапки с отворотом",
         
-        imgURL:"./catalog/images/pinkHat.jpg",
+        imgURL:"./images/c1main.jpg",
         categoryCatalog:{
         'shapka1': {
 
             id:1,
-            name: "шапка с отворотом",
-            color:"розовая",
-            price: 500,
-            pictureURL:"./images/blueHat.jpg",
-            material1:"хлопок",
-            material2:"не хлопок",
+            name: "Комплект: шапка с отворотом и ушками + снуд",
+            color:"серая",
+            price: 700,
+            pictureURL:["./images/c1_01_01.jpg","./images/c1_01_02.jpg","./images/c1_01_03.jpg","./images/c1_01_04.jpg"],
+            material:"трикотаж кашкорсе",
+            consists:"хлопок 95% / 5% эластан",
             "наличие":0
     
         },
         'shapka2':{
             id:2,
-            name: "шапка с отворотом",
-            color:"зеленая",
+            name: "Комплект: шапка с отворотом и ушками + снуд",
+            color:"розовая",
             price: 700,
-            pictureURL:"./images/blueHat.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
+            pictureURL:["./images/c1_02_01.jpg","./images/c1_02_02.jpg","./images/c1_02_03.jpg","./images/c1_02_04.jpg","./images/c1_02_05.jpg"],
+            material:"трикотаж кашкорсе",
+            consists:"хлопок 95% / 5% эластан",
+            "наличие":0
     
     
         },
         'shapka3':{
             id:3,
-            name: "шапка с отворотом",
-            color:"красная",
-            price: 1500,
-            pictureURL:"./shapkiOtvorot/images/3.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
+            name: "Комплект: шапка с отворотом и ушками + снуд",
+            color:"голубая",
+            price: 700,
+            pictureURL:["./images/c1_03_01.jpg","./images/c1_03_02.jpg"],
+            material:"трикотаж кашкорсе",
+            consists:"хлопок 95% / 5% эластан",
+            "наличие":0
     
     
         },
         'shapka4':{
             id:4,
-            name: "шапка с отворотом",
-            color:"красная",
-            price: 1500,
-            pictureURL:"./shapkiOtvorot/images/4.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
-    
-    
+            name: "Комплект: шапка с отворотом + снуд",
+            color:"темно-серая",
+            price: 700,
+            pictureURL:["./images/c1_04_01.jpg","./images/c1_04_02.jpg"],
+            material:"трикотаж кашкорсе",
+            consists:"хлопок 95% / 5% эластан",
+            "наличие":0
+        },
+        'shapka5':{
+            id:5,
+            name: "Комплект: шапка с отворотом и ушками + снуд",
+            color:"бежевая",
+            price: 700,
+            pictureURL:["./images/c1_05_01.jpg","./images/c1_05_02.jpg","./images/c1_05_03.jpg"],
+            material:"трикотаж кашкорсе",
+            consists:"хлопок 95% / 5% эластан",
+            "наличие":0
         }
+
         }
     },
     "Шапки с вязочками":{

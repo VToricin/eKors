@@ -29,11 +29,105 @@ function goodCardComponent(props){
         parentForClose.parentNode.removeChild(parentForClose);
     })      
     
-    //слайдер для изображений(картинок) товара
+    //слайдер для изображений(картинок) товара в карточке
     let goodPhotoSliderContainer = document.createElement('div');
     goodPhotoSliderContainer.classList.add('goodPhotoSliderContainer');
-    goodPhotoSliderContainer.style.backgroundImage = props.pictureURL;
+    let goodPhotoSlider = document.createElement('div');
+    goodPhotoSlider.classList.add('goodPhotoSlider');
+    goodPhotoSliderContainer.appendChild(goodPhotoSlider);
+
     
+
+
+
+    for(let i=0; i<props.pictureURL.length; i++){
+        let itemImageDiv = document.createElement('div');
+        itemImageDiv.classList.add('itemImageDiv');
+        itemImageDiv.style.backgroundImage = `url(${props.pictureURL[i]})`;
+        goodPhotoSlider.appendChild(itemImageDiv); 
+    }
+    //создание переключателей изображений в карточке товара
+    let switcherCounter = 0;
+    let switchButtonDivPrevious = document.createElement('div');
+    let switchButtonDivNext = document.createElement('div');
+    switchButtonDivPrevious.classList.add('switchButton');
+    switchButtonDivNext.classList.add('switchButton');
+    switchButtonDivNext.classList.add('next');
+
+    goodPhotoSliderContainer.appendChild(switchButtonDivNext);
+    switchButtonDivNext.innerHTML = '>';
+    //обработка переключения вперед
+    switchButtonDivNext.addEventListener('click',function(){
+        if(switcherCounter<props.pictureURL.length-1){
+            switcherCounter++;
+            
+        } else {
+            switcherCounter = 0
+        }
+        goodPhotoSlider.style.transform = `translateX(-${switcherCounter}00%)`;
+    })
+    switchButtonDivPrevious.innerHTML = '<';
+    // обработка переключения назад
+    switchButtonDivPrevious.addEventListener('click',function(){
+        if(switcherCounter>0){
+            switcherCounter--;
+            
+        } else {
+            switcherCounter = props.pictureURL.length-1
+        }
+        goodPhotoSlider.style.transform = `translateX(-${switcherCounter}00%)`;
+    })
+
+
+
+    goodPhotoSliderContainer.appendChild(switchButtonDivPrevious);
+    modalCardWindow.appendChild(goodPhotoSliderContainer);
+    // создание информационного блоока в карточке товара
+    let infoBlockContainer = document.createElement('div');
+    infoBlockContainer.classList.add('infoBlockContainer');
+
+    //цена товара внутри карточки
+    let infoBlockPriceDiv = document.createElement('div');
+    infoBlockPriceDiv.classList.add('infoBlockContainer__priceDiv');
+    let cardItemPrice = document.createElement('p');
+    cardItemPrice.innerHTML = `Цена: ${props.price} рублей`;
+
+    infoBlockPriceDiv.appendChild(cardItemPrice);
+    infoBlockContainer.appendChild(infoBlockPriceDiv);
+    //родительский блок дополнительной информации(состав, материалы, наличие) и блок корзина и как заказать
+    let infoBlockInfoCartContainer  = document.createElement('div');
+    infoBlockInfoCartContainer.classList.add('infoBlockInfoCartContainer');
+    infoBlockContainer.appendChild(infoBlockInfoCartContainer);
+    //блок дополнительной информации(состав, материалы, наличие)
+    let infoBlockAdditionalInfo  = document.createElement('div');
+    infoBlockAdditionalInfo.classList.add('infoBlockAdditionalInfo');
+    infoBlockInfoCartContainer.appendChild(infoBlockAdditionalInfo);
+    
+    let materialInfoP = document.createElement('p');
+    materialInfoP.innerHTML = `${props.material}`;
+
+    let consistsInfoP = document.createElement('p');
+    consistsInfoP.innerHTML = `${props.consists}`;
+
+    
+
+
+    let stockInfoP = document.createElement('p');
+    if(props['наличие']===0){
+        stockInfoP.innerHTML = `под заказ`;
+    }else{
+        stockInfoP.innerHTML = `${props}`;
+    }
+    
+    infoBlockAdditionalInfo.appendChild(materialInfoP);
+    infoBlockAdditionalInfo.appendChild(consistsInfoP);
+    infoBlockAdditionalInfo.appendChild(stockInfoP);
+    
+
+
+
+    modalCardWindow.appendChild(infoBlockContainer);
+
     return cardBackgroundField;
 
 }

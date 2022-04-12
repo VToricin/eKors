@@ -104,7 +104,7 @@ function categorySectionBuilder(argu){
         goodCardDiv.classList.add('categoryCard');
         goodsContainer.appendChild(goodCardDiv);
         let goodMainPicture = document.createElement('img');
-        goodMainPicture.src = argu.categoryCatalog[el].pictureURL;
+        goodMainPicture.src = argu.categoryCatalog[el].pictureURL[0];
         let goodName = document.createElement('p');
         goodName.innerHTML = argu.categoryCatalog[el].name;
         let goodPrice = document.createElement('p');

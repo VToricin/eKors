@@ -3,9 +3,9 @@
     width: $widthDesktop;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 125px;
+    margin-top: 105px;
     box-sizing: border-box;
     @media (max-width:$widthPhone) {
         width: 97%;
@@ -24,13 +24,14 @@
     border:10px solid white;
     border-radius: 7px;
     background-color: white;
-    margin-top: 10px;
+    margin: 10.6px;
     box-shadow: 0 0px 6px 0 rgb(61 61 61 / 11%);
 
     @media (max-width:$widthPhone) {
         width: 95%;
         align-items: center;
         justify-content: center;
+        margin: 10.6px 0px;
     }
 
     img{
@@ -43,8 +44,10 @@
         font-family: 'Coda', cursive;
         font-family: 'Inter', sans-serif;
         font-family: $fontFamilyMain;
-        font-size: 25px;
+        font-size: 20px;
         color: rgb(77, 77, 77);
+        margin: 10px 0px;
+        
 
     }
 }
