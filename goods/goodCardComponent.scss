@@ -170,7 +170,7 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: column;
             @media(max-width:$widthSmall){
                 width: 30%;

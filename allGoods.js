@@ -81,7 +81,7 @@ let allGoods = {
             'shapka2':{
                 id:7,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
-                color:"зеленая",
+                color:"желто-зеленая",
                 price: 700,
                 pictureURL:["./images/c2_02_01.jpg","./images/c2_02_02.jpg","./images/c2_02_03.jpg"],
                 material:"трикотаж кашкорсе",
@@ -94,6 +94,27 @@ let allGoods = {
                 color:"серая",
                 price: 700,
                 pictureURL:["./images/c2_03_01.jpg","./images/c2_03_02.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
+                "наличие":0
+            }
+            ,
+            'shapka4':{
+                id:9,
+                name: "Комплект: шапка с вязочками и ушками + снуд",
+                color:"синяя",
+                price: 700,
+                pictureURL:["./images/c2_04_01.jpg","./images/c2_04_02.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
+                "наличие":0
+            },
+            'shapka5':{
+                id:10,
+                name: "Комплект: шапка с вязочками и ушками + снуд",
+                color:"синяя",
+                price: 700,
+                pictureURL:["./images/c2_05_01.jpg","./images/c2_05_02.jpg","./images/c2_05_03.jpg"],
                 material:"трикотаж кашкорсе",
                 consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
                 "наличие":0

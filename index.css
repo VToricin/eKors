@@ -523,7 +523,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
 }
 @media (max-width: 767px) {
@@ -532,7 +532,7 @@ a {
   }
 }
 .cardBackgroundField .modalCardWindow .cartParentContainer .howToOrder {
-  color: rgb(27, 37, 97);
+  color: rgb(255, 65, 205);
 }
 .cardBackgroundField .modalCardWindow .cartParentContainer .itemCardCartButton {
   width: 100px;
