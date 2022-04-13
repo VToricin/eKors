@@ -66,52 +66,38 @@ let allGoods = {
     "Шапки с вязочками":{
         name:"Шапки с вязочками",
         
-        imgURL:"./catalog/images/pinkHat.jpg",
+        imgURL:"./images/c2main.jpg",
         categoryCatalog:{
-        'shapka1': {
-
-            id:1,
-            name: "шапка с отворотом",
-            color:"розовая",
-            price: 500,
-            pictureURL:"./images/blueHat.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
-    
-        },
-        'shapka2':{
-            id:2,
-            name: "шапка с отворотом",
-            color:"зеленая",
-            price: 700,
-            pictureURL:"./images/blueHat.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
-    
-    
-        },
-        'shapka3':{
-            id:3,
-            name: "шапка с отворотом",
-            color:"красная",
-            price: 1500,
-            pictureURL:"./shapkiOtvorot/images/3.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
-    
-    
-        },
-        'shapka4':{
-            id:4,
-            name: "шапка с отворотом",
-            color:"красная",
-            price: 1500,
-            pictureURL:"./shapkiOtvorot/images/4.jpg",
-            material1:"хлопок",
-            material2:"не хлопок"
-    
-    
-        }
+            'shapka1':{
+                id:6,
+                name: "Комплект: шапка с вязочками и ушками + снуд",
+                color:"голубая",
+                price: 700,
+                pictureURL:["./images/c2_01_01.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
+                "наличие":0
+            },
+            'shapka2':{
+                id:7,
+                name: "Комплект: шапка с вязочками и ушками + снуд",
+                color:"зеленая",
+                price: 700,
+                pictureURL:["./images/c2_02_01.jpg","./images/c2_02_02.jpg","./images/c2_02_03.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
+                "наличие":0
+            },
+            'shapka3':{
+                id:8,
+                name: "Комплект: шапка с вязочками и ушками + снуд",
+                color:"серая",
+                price: 700,
+                pictureURL:["./images/c2_03_01.jpg","./images/c2_03_02.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
+                "наличие":0
+            }
         }
     },
     "Повязки на голову":{

@@ -109,7 +109,25 @@ function goodCardComponent(props){
     let consistsInfoP = document.createElement('p');
     consistsInfoP.innerHTML = `${props.consists}`;
 
+    //блок добавления в корзину
+    let cartParentContainer = document.createElement('div');
+    cartParentContainer.classList.add('cartParentContainer');
+    infoBlockInfoCartContainer.appendChild(cartParentContainer);
+
+    let howToOrder = document.createElement('p');
+    howToOrder.classList.add('howToOrder');
+    howToOrder.innerHTML = 'Как заказать?';
+    cartParentContainer.appendChild(howToOrder);
     
+    let itemCardCartButton = document.createElement('div');
+    itemCardCartButton.classList.add('itemCardCartButton');
+    let toCartP = document.createElement('p');
+    toCartP.innerHTML = 'В корзину';
+    itemCardCartButton.appendChild(toCartP);
+    cartParentContainer.appendChild(itemCardCartButton);
+
+
+
 
 
     let stockInfoP = document.createElement('p');

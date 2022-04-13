@@ -22,7 +22,7 @@
         justify-content: center;
 
         
-        @media (max-width:$widthPhone){
+        @media (max-width:$widthSmall){
             width: 94%;
             flex-direction: column;
         }
@@ -78,7 +78,7 @@
             position: relative;
             
 
-            @media(max-width:780px){
+            @media(max-width:$widthSmall){
                 width: 100%;
                 height: 70%;
             }
@@ -131,7 +131,7 @@
                 margin: 10px 0px;
             }
 
-            @media(max-width:780px){
+            @media(max-width:$widthSmall){
                 width: 100%;
                 height: 30%;
                 p{
@@ -142,21 +142,62 @@
         .infoBlockAdditionalInfo{
             display: flex;
             align-items: center;
-            
+            width: 100%;
             flex-wrap: wrap;
             p{
                 width: 100%;
                 text-align: center;
             }
 
-            @media(max-width:780px){
-                
+            @media(max-width:$widthSmall){
+                width: 70%;
                 p{
                     width: 100%;
                     text-align: left;
                 }
             }
         }
+
+        .infoBlockInfoCartContainer{
+            display: flex;
+            flex-direction: column;
+            @media(max-width:$widthSmall){
+                flex-direction: row;
+            }
+
+        }   
+        .cartParentContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @media(max-width:$widthSmall){
+                width: 30%;
+
+            }
+            .howToOrder{
+                color: rgb(255 65 205);
+            }
+            .itemCardCartButton{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(99 206 85 / 60%);
+                box-shadow: 0 1px 6px 0 rgba(69, 69, 69, 0.377);
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 300ms ease;
+                @media(max-width:$widthSmall){
+                    width: 100%;
+                }
+                &:hover{
+                    box-shadow: 0 1px 6px 0 rgb(165 165 167 / 08%);
+                    transition: 300ms ease;
+                }
+            }
+        }    
 
 
     }
