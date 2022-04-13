@@ -73,7 +73,7 @@ let allGoods = {
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"голубая",
                 price: 700,
-                pictureURL:["./images/c2_01_01.jpg"],
+                pictureURL:["./images/c2_01_01.jpg","./images/c2_01_02.jpg"],
                 material:"трикотаж кашкорсе",
                 consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
                 "наличие":0
