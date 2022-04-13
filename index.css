@@ -242,6 +242,7 @@
   background-color: white;
   margin: 10.6px;
   box-shadow: 0 0px 6px 0 rgba(61, 61, 61, 0.11);
+  cursor: pointer;
 }
 @media (max-width: 820px) {
   .categoryCard {
