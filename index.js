@@ -6,7 +6,7 @@ const naviButton = document.querySelector('#naviButton');
 const menuFirst = document.getElementById('menuFirst');
 const menuSecond = document.getElementById('menuSecond');
 const delivery = document.getElementById('delivery');
-
+const homePage = document.getElementById('homePage');
 
 function toggleMenuFunction () {
     menuMenu.classList.toggle('openedMenu');
@@ -87,7 +87,10 @@ delivery.addEventListener('click',function(){
 
 })
 
-/* сверху постороение основных элементов страницы шапка и подвал, не меняются */   
+
+
+
+/* сверху постороение основных элементов страницы шапка и подвал, не меняются + функция постороения */   
 
 
 function categorySectionBuilder(argu){
@@ -197,6 +200,11 @@ function mainPageBuilder(){
 
 mainPageBuilder();
 
+
+homePage.addEventListener('click', function (){
+    spaContainer.innerHTML = '';
+    mainPageBuilder();
+})
 
 
 

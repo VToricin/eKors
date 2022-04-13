@@ -108,9 +108,15 @@
     }
 
     
-
     &__logo{
-        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #homePage{
+        background-image: url(./Home.png);
+        background-position: center;
+        background-size: contain;
     }
 
     #basket{

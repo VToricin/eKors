@@ -177,7 +177,8 @@
 
             }
             .howToOrder{
-                color: rgb(255 65 205);
+                cursor: pointer;
+                font-weight: 600;
             }
             .itemCardCartButton{
                 width: 100px;
@@ -189,6 +190,7 @@
                 align-items: center;
                 justify-content: center;
                 transition: 300ms ease;
+                cursor: pointer;
                 @media(max-width:$widthSmall){
                     width: 100%;
                 }

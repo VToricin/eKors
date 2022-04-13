@@ -123,7 +123,13 @@
   }
 }
 .header__logo {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.header #homePage {
+  background-image: url(./Home.png);
+  background-position: center;
+  background-size: contain;
 }
 .header #basket {
   background-image: url(./basket2.png);
@@ -532,7 +538,8 @@ a {
   }
 }
 .cardBackgroundField .modalCardWindow .cartParentContainer .howToOrder {
-  color: rgb(255, 65, 205);
+  cursor: pointer;
+  font-weight: 600;
 }
 .cardBackgroundField .modalCardWindow .cartParentContainer .itemCardCartButton {
   width: 100px;
@@ -544,6 +551,7 @@ a {
   align-items: center;
   justify-content: center;
   transition: 300ms ease;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .cardBackgroundField .modalCardWindow .cartParentContainer .itemCardCartButton {
