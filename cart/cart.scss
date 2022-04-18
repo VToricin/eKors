@@ -1,0 +1,74 @@
+.cartMainContainer{
+    width: $widthDesktop;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 105px;
+    @media(max-width:$widthSmall){
+        width: 100%;
+
+    }
+
+
+    .cartItemDiv{
+        display: flex;
+        align-items: center;
+        
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 0 1px 6px 0 rgb(165 165 167 / 14%);
+        width: 100%;
+        margin-top: 7px;
+
+        @media(max-width:$widthSmall){
+            flex-direction: column;
+            width: 98%;
+        }
+
+        .headParametrs{
+            
+            height: 30px;
+            display: flex;
+            align-items: center;
+
+            .headInput{
+                width: 100px;
+                margin: 0px 10px;
+                @media(max-width:$widthSmall){
+                    width:30%;
+                }
+            }
+        }
+        .cartItemDel{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(252, 250, 250);
+        }
+        .delAndPricePanel{
+            display: flex;
+            align-items: center;
+        }
+        .Xcomponent{
+            width: 20px;
+            height: 1.5px;
+            background-color: rgb(54, 54, 54);
+            position: absolute;
+        }
+
+    }
+    .emptyCartDiv{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 55px;
+        }
+    }
+}

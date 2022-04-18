@@ -126,8 +126,21 @@ function goodCardComponent(props){
     itemCardCartButton.appendChild(toCartP);
     cartParentContainer.appendChild(itemCardCartButton);
 
+    
+      if(Object.keys(localStorage).includes(`ekors${props.id}`))
+      {
+      toCartP.innerHTML = 'В корзине';
+      itemCardCartButton.classList.add('inCart');
+      }
 
+    //функция добавления в корзину
 
+    itemCardCartButton.addEventListener('click', function(){
+        
+        localStorage[`ekors${props.id}`] = JSON.stringify(props);
+        toCartP.innerHTML = 'В корзине';
+        itemCardCartButton.classList.add('inCart');
+    })
 
 
     let stockInfoP = document.createElement('p');

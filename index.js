@@ -7,6 +7,10 @@ const menuFirst = document.getElementById('menuFirst');
 const menuSecond = document.getElementById('menuSecond');
 const delivery = document.getElementById('delivery');
 const homePage = document.getElementById('homePage');
+const basket = document.getElementById('basket');
+
+
+
 
 function toggleMenuFunction () {
     menuMenu.classList.toggle('openedMenu');
@@ -20,7 +24,7 @@ naviButton.addEventListener('click', function(){
     }
 )
 
-
+//построение футера + добавление категорий в выпадающее меню
 function categoryFooterBuilder (props) {
     
     let footerCategoryName = document.createElement('p');
@@ -44,6 +48,14 @@ function categoryFooterBuilder (props) {
    
 
 }
+
+basket.addEventListener('click', function(){
+    spaContainer.innerHTML = '';
+    window.scroll(0,0);
+    cartBuilderFunction();
+})
+
+
 
 Object.keys(allGoods).map(el=>{
     
