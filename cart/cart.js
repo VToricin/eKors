@@ -27,30 +27,44 @@ function cartBuilderFunction(){
                 cartItemName.classList.add('cartItemName');
                 cartItemName.innerHTML = item.name;
                 cartItemDiv.appendChild(cartItemName);
+
+
+                let cartItemInfoParentDiv = document.createElement('div');
+                cartItemInfoParentDiv.classList.add('cartItemInfoParentDiv');
+                cartItemDiv.appendChild(cartItemInfoParentDiv);
+                //picture
+                let cartItemImage = document.createElement('img');
+                cartItemImage.src = item.pictureURL[0];
+                cartItemImage.classList.add('cartItemImage');
+                cartItemInfoParentDiv.appendChild(cartItemImage);
                 //панелька для ввода параметров головы
                 let headParametrs = document.createElement('div');
                 headParametrs.classList.add('headParametrs');
                 let headCircumference = document.createElement('input');
+                headCircumference.placeholder = 'окружность головы'
                 headCircumference.classList.add('headInput');
                 let headDepth = document.createElement('input');
                 headDepth.classList.add('headInput')
                 let quantity = document.createElement('input');
                 quantity.classList.add('headInput');
+                quantity.id = 'quantity';
+                quantity.placeholder = 'кол-во';
                 headParametrs.appendChild(headCircumference);
                 headParametrs.appendChild(headDepth);
                 headParametrs.appendChild(quantity);
-                cartItemDiv.appendChild(headParametrs);
+                cartItemInfoParentDiv.appendChild(headParametrs);
 
                 //панелька для удаления строки и ценой
                 let delAndPricePanel = document.createElement('div');
                 delAndPricePanel.classList.add('delAndPricePanel');
-                cartItemDiv.appendChild(delAndPricePanel);
+                headParametrs.appendChild(delAndPricePanel);
 
                 let cartItemPrice = document.createElement('p');
                 cartItemPrice.innerHTML = `${item.price} руб.`;
                 delAndPricePanel.appendChild(cartItemPrice);
                 //кнопка удаления позиции из корзины
                 let cartItemDel = document.createElement('div');
+                
                 cartItemDel.classList.add('cartItemDel');
                 delAndPricePanel.appendChild(cartItemDel);
 
@@ -71,6 +85,9 @@ function cartBuilderFunction(){
                     cartBuilderFunction();        
                 })
 
+                //
+                
+                
             }
         }
     }

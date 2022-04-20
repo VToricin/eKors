@@ -5,25 +5,30 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 105px;
-    @media(max-width:$widthSmall){
-        width: 100%;
+    @media(max-width:$widthDesktop){
+        width: 60%;
 
+    }
+    @media(max-width:$widthSmall){
+        width: 98%;
     }
 
 
     .cartItemDiv{
         display: flex;
         align-items: center;
-        
+        min-height: 100px;
         background-color: white;
         border-radius: 7px;
         box-shadow: 0 1px 6px 0 rgb(165 165 167 / 14%);
         width: 100%;
         margin-top: 7px;
+        box-sizing: border-box;
 
-        @media(max-width:$widthSmall){
+        @media(max-width:$widthDesktop){
             flex-direction: column;
             width: 98%;
+            border: 15px solid white;
         }
 
         .headParametrs{
@@ -32,11 +37,20 @@
             display: flex;
             align-items: center;
 
+            @media(max-width:$widthDesktop){
+                flex-direction: column;
+                width: 50%;
+            }
+
             .headInput{
-                width: 100px;
+                width: 130px;
                 margin: 0px 10px;
-                @media(max-width:$widthSmall){
-                    width:30%;
+                font-family: 'Coda', cursive;
+                font-family: 'Inter', sans-serif;
+                font-family: $fontFamilyMain;
+                @media(max-width:$widthDesktop){
+                    width:80%;
+                    margin: 10px 0px;
                 }
             }
         }
@@ -45,13 +59,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
+            width: 60px;
             height: 30px;
-            background-color: rgb(252, 250, 250);
+            border-radius: 10px;
+            background-color: rgb(230 168 168);
+            
         }
         .delAndPricePanel{
             display: flex;
             align-items: center;
+            justify-content: space-around;
+            width: 30%;
+            @media(max-width:$widthDesktop){
+                width:80%;
+                
+            }
         }
         .Xcomponent{
             width: 20px;
@@ -69,6 +91,37 @@
         justify-content: center;
         p{
             font-size: 55px;
+        }
+    }
+    .cartItemImage{
+        width: 45px;
+        height: 60px;
+        border-radius: 5px;
+        @media(max-width:$widthDesktop){
+            width: 150px;
+            height: 200px;
+            
+        }
+
+    }
+    .cartItemName{
+        margin: 0px 10px;
+        @media(max-width:$widthDesktop){
+            margin: 10px 0px;
+
+        }
+    }
+    .cartItemInfoParentDiv{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        @media(max-width:$widthDesktop){
+            width: 100%;
+            align-items: flex-start;
+            margin: 15px 0px;
+
         }
     }
 }

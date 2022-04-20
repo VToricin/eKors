@@ -600,24 +600,32 @@ a {
   flex-direction: column;
   margin-top: 105px;
 }
+@media (max-width: 1024px) {
+  .cartMainContainer {
+    width: 60%;
+  }
+}
 @media (max-width: 767px) {
   .cartMainContainer {
-    width: 100%;
+    width: 98%;
   }
 }
 .cartMainContainer .cartItemDiv {
   display: flex;
   align-items: center;
+  min-height: 100px;
   background-color: white;
   border-radius: 7px;
   box-shadow: 0 1px 6px 0 rgba(165, 165, 167, 0.14);
   width: 100%;
   margin-top: 7px;
+  box-sizing: border-box;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .cartMainContainer .cartItemDiv {
     flex-direction: column;
     width: 98%;
+    border: 15px solid white;
   }
 }
 .cartMainContainer .cartItemDiv .headParametrs {
@@ -625,13 +633,23 @@ a {
   display: flex;
   align-items: center;
 }
-.cartMainContainer .cartItemDiv .headParametrs .headInput {
-  width: 100px;
-  margin: 0px 10px;
+@media (max-width: 1024px) {
+  .cartMainContainer .cartItemDiv .headParametrs {
+    flex-direction: column;
+    width: 50%;
+  }
 }
-@media (max-width: 767px) {
+.cartMainContainer .cartItemDiv .headParametrs .headInput {
+  width: 130px;
+  margin: 0px 10px;
+  font-family: "Coda", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Alumni Sans", sans-serif;
+}
+@media (max-width: 1024px) {
   .cartMainContainer .cartItemDiv .headParametrs .headInput {
-    width: 30%;
+    width: 80%;
+    margin: 10px 0px;
   }
 }
 .cartMainContainer .cartItemDiv .cartItemDel {
@@ -639,13 +657,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
+  width: 60px;
   height: 30px;
-  background-color: rgb(252, 250, 250);
+  border-radius: 10px;
+  background-color: rgb(230, 168, 168);
 }
 .cartMainContainer .cartItemDiv .delAndPricePanel {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .cartItemDiv .delAndPricePanel {
+    width: 80%;
+  }
 }
 .cartMainContainer .cartItemDiv .Xcomponent {
   width: 20px;
@@ -662,6 +688,38 @@ a {
 }
 .cartMainContainer .emptyCartDiv p {
   font-size: 55px;
+}
+.cartMainContainer .cartItemImage {
+  width: 45px;
+  height: 60px;
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .cartItemImage {
+    width: 150px;
+    height: 200px;
+  }
+}
+.cartMainContainer .cartItemName {
+  margin: 0px 10px;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .cartItemName {
+    margin: 10px 0px;
+  }
+}
+.cartMainContainer .cartItemInfoParentDiv {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .cartItemInfoParentDiv {
+    width: 100%;
+    align-items: flex-start;
+    margin: 15px 0px;
+  }
 }
 
 body {
@@ -683,7 +741,7 @@ p {
   font-family: "Inter", sans-serif;
   font-family: "Alumni Sans", sans-serif;
   font-size: 20px;
-  color: rgb(77, 77, 77);
+  color: rgb(109, 107, 107);
 }
 
 #spaContainer {
