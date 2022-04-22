@@ -17,6 +17,18 @@ function cartBuilderFunction(){
         emptyCartP.innerHTML = `Пока здесь пусто :(`;
     } else {
         //если в корзине что-то есть строится содержимое
+
+        let instructionsContainer = document.createElement('div'); 
+        instructionsContainer.classList.add('div');
+
+        let instructionsStartP = document.createElement('p');
+        instructionsStartP.classList.add('instructionsP');
+
+        let instructionsHeadParametersContainer  = document.createElement('div');
+        instructionsHeadParametersContainer.classList.add('instructionsHeadParametersContainer');
+            let instructionsHeadParametersTextPart = document.createElement('div');
+
+
         for (let i=0; i<Object.keys(localStorage).length; i++){
             if (Object.keys(localStorage)[i].indexOf('ekors')===0){
             let cartItemDiv = document.createElement('div');
@@ -44,7 +56,8 @@ function cartBuilderFunction(){
                 headCircumference.placeholder = 'окружность головы'
                 headCircumference.classList.add('headInput');
                 let headDepth = document.createElement('input');
-                headDepth.classList.add('headInput')
+                headDepth.classList.add('headInput');
+                headDepth.placeholder = 'глубина шапки';
                 let quantity = document.createElement('input');
                 quantity.classList.add('headInput');
                 quantity.id = 'quantity';

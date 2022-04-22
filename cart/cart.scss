@@ -48,6 +48,9 @@
                 font-family: 'Coda', cursive;
                 font-family: 'Inter', sans-serif;
                 font-family: $fontFamilyMain;
+                color: rgb(57, 57, 57);
+                font-size: 20px;
+                
                 @media(max-width:$widthDesktop){
                     width:80%;
                     margin: 10px 0px;
