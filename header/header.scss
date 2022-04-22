@@ -143,6 +143,7 @@
             transform: rotate(45deg);
             top: 12px;
             transition: 300ms ease;
+
         }
     }
     #menuMiddle{
@@ -192,7 +193,7 @@
         }
         
         &.openedMenu {
-            
+            box-shadow: 0 1px 6px 0 rgb(165 165 167 / 28%);
             transition: 300ms ease;
             top: 100px;
             @media (max-width:$widthDesktop) {

@@ -200,6 +200,7 @@
   cursor: pointer;
 }
 .header .menuMenu.openedMenu {
+  box-shadow: 0 1px 6px 0 rgba(165, 165, 167, 0.28);
   transition: 300ms ease;
   top: 100px;
 }
@@ -610,6 +611,51 @@ a {
     width: 98%;
   }
 }
+.cartMainContainer .instructionsContainer {
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .instructionsContainer {
+    width: 98%;
+  }
+}
+.cartMainContainer .instructionsContainer .instructionsP {
+  text-indent: 15px;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .instructionsContainer .instructionsP {
+    margin: 0px 20px;
+  }
+}
+.cartMainContainer .instructionsContainer .instructionsHeadParametersContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .instructionsContainer .instructionsHeadParametersContainer {
+    flex-direction: column;
+  }
+}
+.cartMainContainer .instructionsContainer .instructionsMeasurmentsP {
+  margin: 0px 20px;
+  color: black;
+}
+.cartMainContainer .instructionsContainer #instructionImID {
+  width: 250px;
+  border-radius: 7px;
+  margin: 0px;
+}
+@media (max-width: 1024px) {
+  .cartMainContainer .instructionsContainer #instructionImID {
+    width: 100%;
+    margin: 0px;
+  }
+}
 .cartMainContainer .cartItemDiv {
   display: flex;
   align-items: center;
@@ -647,6 +693,8 @@ a {
   font-family: "Alumni Sans", sans-serif;
   color: rgb(57, 57, 57);
   font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid darkgrey;
 }
 @media (max-width: 1024px) {
   .cartMainContainer .cartItemDiv .headParametrs .headInput {

@@ -18,17 +18,43 @@ function cartBuilderFunction(){
     } else {
         //если в корзине что-то есть строится содержимое
 
+        //построение блока-инструкции для измерения головы и дополнительной информации
         let instructionsContainer = document.createElement('div'); 
-        instructionsContainer.classList.add('div');
+        instructionsContainer.classList.add('instructionsContainer');
+        cartMainContainer.appendChild(instructionsContainer);
+
 
         let instructionsStartP = document.createElement('p');
         instructionsStartP.classList.add('instructionsP');
+        instructionsContainer.appendChild(instructionsStartP);
+        instructionsStartP.innerHTML = cartInstructionsDetails.start;
 
         let instructionsHeadParametersContainer  = document.createElement('div');
         instructionsHeadParametersContainer.classList.add('instructionsHeadParametersContainer');
+        instructionsContainer.appendChild(instructionsHeadParametersContainer);
             let instructionsHeadParametersTextPart = document.createElement('div');
+            instructionsHeadParametersTextPart.classList.add('instructionsHeadParametersTextPart');
+            instructionsHeadParametersContainer.appendChild(instructionsHeadParametersTextPart);
+                for(let i=0; i<cartInstructionsDetails.headMeasures.length;i++ ){
+                    let instructionsMeasurmentsP = document.createElement('p');
+                    instructionsMeasurmentsP.classList.add('instructionsMeasurmentsP');
+                    instructionsHeadParametersTextPart.appendChild(instructionsMeasurmentsP);
+                    instructionsMeasurmentsP.innerHTML = cartInstructionsDetails.headMeasures[i];
+                }
 
+            let instructionsImage = document.createElement('img');
+            instructionsImage.id = 'instructionImID';
+            instructionsImage.src = cartInstructionsDetails.imageSource;
+            instructionsHeadParametersContainer.appendChild(instructionsImage);
 
+            cartInstructionsDetails.afterInstructions.map(el=>{
+                let cartInstructionsEndP = document.createElement('p');
+                cartInstructionsEndP.classList.add('instructionsP');
+                cartInstructionsEndP.innerHTML = el;
+                instructionsContainer.appendChild(cartInstructionsEndP);
+            })    
+
+        // построение товаров корзины        
         for (let i=0; i<Object.keys(localStorage).length; i++){
             if (Object.keys(localStorage)[i].indexOf('ekors')===0){
             let cartItemDiv = document.createElement('div');
@@ -61,7 +87,8 @@ function cartBuilderFunction(){
                 let quantity = document.createElement('input');
                 quantity.classList.add('headInput');
                 quantity.id = 'quantity';
-                quantity.placeholder = 'кол-во';
+                quantity.placeholder = 'кол-во, 1шт';
+                quantity.value = 1;
                 headParametrs.appendChild(headCircumference);
                 headParametrs.appendChild(headDepth);
                 headParametrs.appendChild(quantity);
@@ -73,7 +100,7 @@ function cartBuilderFunction(){
                 headParametrs.appendChild(delAndPricePanel);
 
                 let cartItemPrice = document.createElement('p');
-                cartItemPrice.innerHTML = `${item.price} руб.`;
+                cartItemPrice.innerHTML = `${item.price*quantity.value} руб.`;
                 delAndPricePanel.appendChild(cartItemPrice);
                 //кнопка удаления позиции из корзины
                 let cartItemDel = document.createElement('div');

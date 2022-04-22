@@ -13,6 +13,52 @@
         width: 98%;
     }
 
+    .instructionsContainer{
+        width: $widthDesktop;
+        display: flex;
+        flex-direction: column;
+    
+        justify-content: center;
+
+        @media(max-width:$widthDesktop){
+            width: 98%;
+        }
+
+        .instructionsP{
+            text-indent: 15px;
+            @media(max-width:$widthDesktop){
+                
+                margin: 0px 20px;
+            }
+        }
+
+        .instructionsHeadParametersContainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media(max-width:$widthDesktop){
+                flex-direction: column;
+            }
+
+        }
+
+        .instructionsMeasurmentsP{
+            margin: 0px 20px;
+            color: black;
+        }
+        #instructionImID{
+            width: 250px;
+            border-radius: 7px;
+            margin: 0px;
+            @media(max-width:$widthDesktop){
+                width: 100%;
+                margin: 0px;
+            }
+        }
+    }
+
 
     .cartItemDiv{
         display: flex;
@@ -50,7 +96,8 @@
                 font-family: $fontFamilyMain;
                 color: rgb(57, 57, 57);
                 font-size: 20px;
-                
+                border-radius: 5px;
+                border: 1px solid darkgrey;
                 @media(max-width:$widthDesktop){
                     width:80%;
                     margin: 10px 0px;
