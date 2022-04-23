@@ -119,6 +119,7 @@
         background-size: contain;
         width: 22px;
         height: 22px;
+        cursor: pointer;
 
     }
 
@@ -126,6 +127,7 @@
         background-image: url(./basket2.png);
         background-position: center;
         background-size: contain;
+        cursor: pointer;
     }
 
     .header__menu {
@@ -133,6 +135,7 @@
         width: 20px;
         height: 1.5px;
         background-color: rgb(54, 54, 54);
+        cursor: pointer;
     }
 
     #menuFirst{

@@ -103,6 +103,9 @@
                     margin: 10px 0px;
                 }
             }
+            #quantity{
+                width: 70px;
+            }
         }
         .cartItemDel{
             position: relative;
@@ -173,5 +176,64 @@
             margin: 15px 0px;
 
         }
+    }
+
+    .customerInfoContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        height: 70px;
+        border-radius: 7px;
+        margin: 20px 0px;
+        box-shadow: 0 0px 10px 0 rgb(165 165 167 / 24%);
+        @media(max-width:$widthDesktop){
+            flex-direction: column;
+            height: auto;
+            width: 98%;
+
+        }
+        .customerData{
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #9c9c9c;
+            background-color: rgb(238 238 238);
+            height: 30px;
+            font-family: 'Coda', cursive;
+            font-family: 'Inter', sans-serif;
+            font-family: $fontFamilyMain;
+            margin: 0px;
+            font-size: 20px;
+
+            @media(max-width:$widthDesktop){
+                width: 80%;
+                margin: 10px 0px;
+            }
+        }
+        .orderConfirmationButton{
+            background-color: rgb(99 206 85 / 60%);
+            width: 200px;
+            height: 40px;
+            border-radius: 7px;
+            box-shadow: 0 0px 6px 0 rgba(15, 15, 15, 0.24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Alumni Sans", sans-serif;
+            transition: 300ms ease;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 0px 3px 0 rgba(15, 15, 15, 0.14);
+                transition: 300ms ease;
+            }
+            @media(max-width:$widthDesktop){
+                margin: 10px 0px;
+            }
+
+        }
+
     }
 }

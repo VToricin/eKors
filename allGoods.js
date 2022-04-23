@@ -68,7 +68,7 @@ let allGoods = {
         
         imgURL:"./images/c2main.jpg",
         categoryCatalog:{
-            'shapka1':{
+            'shapka101':{
                 id:101,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"голубая",
@@ -78,7 +78,7 @@ let allGoods = {
                 consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
                 "наличие":0
             },
-            'shapka2':{
+            'shapka102':{
                 id:102,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"желто-зеленая",
@@ -88,7 +88,7 @@ let allGoods = {
                 consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
                 "наличие":0
             },
-            'shapka3':{
+            'shapka103':{
                 id:103,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"серая",
@@ -99,7 +99,7 @@ let allGoods = {
                 "наличие":0
             }
             ,
-            'shapka4':{
+            'shapka104':{
                 id:104,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"синяя",
@@ -109,7 +109,7 @@ let allGoods = {
                 consists:"верх 95% хлопок, подкладка 100% хлопок, флис 100% п/э",
                 "наличие":0
             },
-            'shapka5':{
+            'shapka105':{
                 id:105,
                 name: "Комплект: шапка с вязочками и ушками + снуд",
                 color:"бордовая",
@@ -121,15 +121,91 @@ let allGoods = {
             }
         }
     },
-    "Повязки на голову":{
-        name:"Повязки на голову",
+    "Тюрбаны":{
+        name:"Тюрбаны",
         
-        imgURL:"./catalog/images/pinkHat.jpg"
+        imgURL:"./images/c3_05_01.jpg",
+        categoryCatalog:{
+            'shapka201':{
+                id:201,
+                name: "Комплект:тюрбан + снуд",
+                color:"белый",
+                price: 950,
+                pictureURL:["./images/c3_01_01.jpg","./images/c3_01_02.jpg"],
+                material:"вязаный трикотаж или трикотаж в рубчик",
+                consists:"флис или хлопок на выбор",
+                "наличие":0
+            },
+            'shapka202':{
+                id:202,
+                name: "Комплект:тюрбан + снуд",
+                color:"желтый",
+                price: 950,
+                pictureURL:["./images/c3_02_01.jpg","./images/c3_02_02.jpg","./images/c3_02_03.jpg"],
+                material:"вязаный трикотаж или трикотаж в рубчик",
+                consists:"флис или хлопок на выбор",
+                "наличие":0
+            },
+            'shapka203':{
+                id:203,
+                name: "Комплект:тюрбан с вязочками + снуд",
+                color:"розовый",
+                price: 950,
+                pictureURL:["./images/c3_03_01.jpg","./images/c3_03_02.jpg"],
+                material:"вязаный трикотаж или трикотаж в рубчик",
+                consists:"флис или хлопок на выбор",
+                "наличие":0
+            }
+            ,
+            'shapka204':{
+                id:204,
+                name: "Комплект:тюрбан с вязочками + снуд",
+                color:"коричневый",
+                price: 950,
+                pictureURL:["./images/c3_04_01.jpg","./images/c3_04_02.jpg"],
+                material:"вязаный трикотаж или трикотаж в рубчик",
+                consists:"флис или хлопок на выбор",
+                "наличие":0
+            },
+            'shapka205':{
+                id:205,
+                name: "Комплект:тюрбан с вязочками + снуд",
+                color:"серый",
+                price: 950,
+                pictureURL:["./images/c3_05_01.jpg","./images/c3_05_02.jpg"],
+                material:"вязаный трикотаж или трикотаж в рубчик",
+                consists:"флис или хлопок на выбор",
+                "наличие":0
+            }
+        }
     },
-    "Банданы":{
-        name:"Банданы",
+    "Повязки":{
+        name:"Повязки",
         
-        imgURL:"./catalog/images/pinkHat.jpg"
+        imgURL:"./images/c4main.jpg",
+        categoryCatalog:{
+            'shapka301':{
+                id:301,
+                name: "Комплект:повязка + снуд",
+                color:"разный",
+                price: 350,
+                pictureURL:["./images/c4_01_01.jpg","./images/c4_01_02.jpg","./images/c4_01_03.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"95% хлопок",
+                "наличие":0
+            },
+            'shapka302':{
+                id:302,
+                name: "Комплект:повязка + снуд",
+                color:"разный",
+                price: 350,
+                pictureURL:["./images/c4_02_01.jpg","./images/c4_02_02.jpg","./images/c4_02_03.jpg","./images/c4_02_04.jpg","./images/c4_02_05.jpg"],
+                material:"трикотаж кашкорсе",
+                consists:"95% хлопок",
+                "наличие":0
+            }
+            
+        }
     },
     "Панамки":{
         name:"Панамки",

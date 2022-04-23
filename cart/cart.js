@@ -84,11 +84,21 @@ function cartBuilderFunction(){
                 let headDepth = document.createElement('input');
                 headDepth.classList.add('headInput');
                 headDepth.placeholder = 'глубина шапки';
+
+                               
                 let quantity = document.createElement('input');
                 quantity.classList.add('headInput');
                 quantity.id = 'quantity';
-                quantity.placeholder = 'кол-во, 1шт';
+                quantity.type = 'number';
                 quantity.value = 1;
+                item.quantity = 1;
+                quantity.placeholder = 'кол-во, 1шт';
+                quantity.addEventListener( 'change', function (){
+                    itemTotalPrice();
+                    item.quantity = quantity.value;
+                })
+                
+
                 headParametrs.appendChild(headCircumference);
                 headParametrs.appendChild(headDepth);
                 headParametrs.appendChild(quantity);
@@ -100,7 +110,11 @@ function cartBuilderFunction(){
                 headParametrs.appendChild(delAndPricePanel);
 
                 let cartItemPrice = document.createElement('p');
-                cartItemPrice.innerHTML = `${item.price*quantity.value} руб.`;
+                function itemTotalPrice (){
+                    cartItemPrice.innerHTML = `${item.price*quantity.value} руб.`;
+
+                }
+                itemTotalPrice();
                 delAndPricePanel.appendChild(cartItemPrice);
                 //кнопка удаления позиции из корзины
                 let cartItemDel = document.createElement('div');
@@ -130,5 +144,32 @@ function cartBuilderFunction(){
                 
             }
         }
+
+        //построение формы для заказа 
+        let customerInfoContainer = document.createElement('div');
+        customerInfoContainer.classList.add('customerInfoContainer');
+        cartMainContainer.appendChild(customerInfoContainer);
+
+        let customerPhonenumber = document.createElement('input');
+        customerPhonenumber.classList.add('customerData');
+        customerInfoContainer.appendChild(customerPhonenumber);
+        customerPhonenumber.placeholder = 'Ваш контактный телефон'
+
+        let customerEmail = document.createElement('input');
+        customerEmail.classList.add('customerData');
+        customerInfoContainer.appendChild(customerEmail);
+        customerEmail.placeholder = 'email для связи с Вами';
+
+        let totalOrderCost = document.createElement('p');
+
+        let orderConfirmationButton = document.createElement('div');
+        orderConfirmationButton.classList.add('orderConfirmationButton');
+        customerInfoContainer.appendChild(orderConfirmationButton);
+        orderConfirmationButton.innerHTML ='Подтверждение заказа';
+
+        
+
+
+
     }
 }
