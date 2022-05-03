@@ -11,7 +11,6 @@ const basket = document.getElementById('basket');
 
 
 
-
 function toggleMenuFunction () {
     menuMenu.classList.toggle('openedMenu');
     menuFirst.classList.toggle('openedMenu');

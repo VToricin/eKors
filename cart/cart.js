@@ -1,10 +1,20 @@
 
+let globalCartObject = {};
+let whatToSend = 0;
+
+            
 
 function cartBuilderFunction(){
-    spaContainer.innerHTML = '';
-    let cartMainContainer = document.createElement('section');
-    cartMainContainer.classList.add('cartMainContainer');
     
+    spaContainer.innerHTML = '';
+    let cartMainContainer = document.createElement('form');
+    cartMainContainer.classList.add('cartMainContainer');
+    cartMainContainer.action = '../mail.php';
+    cartMainContainer.method = 'POST';
+
+    
+
+
     spaContainer.appendChild(cartMainContainer);
     if(Object.keys(localStorage).length===0){
         //если пустая корзина
@@ -19,6 +29,9 @@ function cartBuilderFunction(){
         //если в корзине что-то есть строится содержимое
 
         //построение блока-инструкции для измерения головы и дополнительной информации
+
+        
+        
         let instructionsContainer = document.createElement('div'); 
         instructionsContainer.classList.add('instructionsContainer');
         cartMainContainer.appendChild(instructionsContainer);
@@ -54,12 +67,27 @@ function cartBuilderFunction(){
                 instructionsContainer.appendChild(cartInstructionsEndP);
             })    
 
-        // построение товаров корзины        
+        // построение товаров корзины  
+        
+        
+        globalCartObject = {};    
+        
+
         for (let i=0; i<Object.keys(localStorage).length; i++){
             if (Object.keys(localStorage)[i].indexOf('ekors')===0){
             let cartItemDiv = document.createElement('div');
             cartItemDiv.classList.add('cartItemDiv');
             let item = JSON.parse(localStorage[Object.keys(localStorage)[i]]);
+
+
+            function whatToSendUpdate  (){
+                
+
+                whatToSend = JSON.stringify(globalCartObject);
+                totalOrderInformation.value = whatToSend;
+            }
+
+            globalCartObject[item.id] = item; 
             cartMainContainer.appendChild(cartItemDiv);
                 let cartItemName = document.createElement('p');
                 cartItemName.classList.add('cartItemName');
@@ -81,9 +109,24 @@ function cartBuilderFunction(){
                 let headCircumference = document.createElement('input');
                 headCircumference.placeholder = 'окружность головы'
                 headCircumference.classList.add('headInput');
+                
+                headCircumference.addEventListener('change', function(){
+
+                    globalCartObject[item.id].diametr = headCircumference.value;
+                    whatToSendUpdate();
+                })
+                    
+
+
                 let headDepth = document.createElement('input');
                 headDepth.classList.add('headInput');
                 headDepth.placeholder = 'глубина шапки';
+                
+
+                headDepth.addEventListener('change', function(){
+                    globalCartObject[item.id].glubina = headDepth.value;
+                    whatToSendUpdate();
+                })
 
                                
                 let quantity = document.createElement('input');
@@ -153,19 +196,38 @@ function cartBuilderFunction(){
         let customerPhonenumber = document.createElement('input');
         customerPhonenumber.classList.add('customerData');
         customerInfoContainer.appendChild(customerPhonenumber);
-        customerPhonenumber.placeholder = 'Ваш контактный телефон'
+        customerPhonenumber.placeholder = 'Ваш контактный телефон';
+        customerPhonenumber.name = 'user_phone';
 
         let customerEmail = document.createElement('input');
         customerEmail.classList.add('customerData');
         customerInfoContainer.appendChild(customerEmail);
         customerEmail.placeholder = 'email для связи с Вами';
+        customerEmail.name = 'user_email';
 
-        let totalOrderCost = document.createElement('p');
+        let totalOrderInformation = document.createElement('input');
+        totalOrderInformation.type = 'hidden';
+        
 
-        let orderConfirmationButton = document.createElement('div');
+        
+
+        let orderConfirmationButton = document.createElement('button');
         orderConfirmationButton.classList.add('orderConfirmationButton');
-        customerInfoContainer.appendChild(orderConfirmationButton);
         orderConfirmationButton.innerHTML ='Подтверждение заказа';
+        customerInfoContainer.appendChild(orderConfirmationButton);
+
+        orderConfirmationButton.type = 'submit';
+        
+        
+
+        
+
+        
+
+        orderConfirmationButton.addEventListener('click', function(){
+            whatToSendUpdate()
+
+        }) 
 
         
 
