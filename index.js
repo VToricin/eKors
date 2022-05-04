@@ -164,10 +164,7 @@ function workshopSectionBuilder (){
     workshop__name.classList.add('workshop__name');
     workshop__name.innerHTML = 'СОБСТВЕННАЯ МАСТЕРСКАЯ';
     
-    let workshopContentArray = [["./workshop/images/HusqvarnaE20.jpg", 
-    "Надежное, высокоточное оборудование от ведущих производителей позволяет мне избегать брака и радовать Вас готовыми закзами в самые кратчайшие сроки."],
-    ["./workshop/images/new.jpg","Лучшие безопасные материалы, веселые и нежные расцетки - все это подчернет индивидуальность и создаст безупречный комфорт для Вашего малыша."]]; 
-
+    
     for (let i=0; i<workshopContentArray.length; i++) {
         let workshop__container = document.createElement('div');
         workshop__container.classList.add('workshop__container');

@@ -1,0 +1,13 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Alumni Sans', sans-serif;
+}
+p{
+    text-align: center;
+}
