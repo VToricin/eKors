@@ -114,10 +114,11 @@ function goodCardComponent(props){
     cartParentContainer.classList.add('cartParentContainer');
     infoBlockInfoCartContainer.appendChild(cartParentContainer);
 
-    let howToOrder = document.createElement('p');
+    /* let howToOrder = document.createElement('p');
     howToOrder.classList.add('howToOrder');
     howToOrder.innerHTML = 'Как заказать?';
-    cartParentContainer.appendChild(howToOrder);
+    howToOrder.dataTitle = "Добавьте товар в корзину и перейдите в неё";
+    cartParentContainer.appendChild(howToOrder); */
     
     let itemCardCartButton = document.createElement('div');
     itemCardCartButton.classList.add('itemCardCartButton');
