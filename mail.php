@@ -10,7 +10,7 @@ $newOrder = $_POST['newOrder'];
 $nn = htmlspecialchars($_POST['newOrder']);
 $nn = urldecode($nn);
 
-$to = "whiitered@gmail.com";     
+$to = "kors.masteriza@yandex.ru";     
 
 $message = "Новый заказ на: " . $newOrder . "контакты для обратной связи: " . $phone . ", " . $email;
 $subject = "Заявка с тестового сайта";

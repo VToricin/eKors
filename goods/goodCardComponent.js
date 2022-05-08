@@ -148,7 +148,7 @@ function goodCardComponent(props){
     if(props['наличие']===0){
         stockInfoP.innerHTML = `под заказ`;
     }else{
-        stockInfoP.innerHTML = `${props}`;
+        stockInfoP.innerHTML = `В наличии ${props['наличие']} шт.`;
     }
     
     infoBlockAdditionalInfo.appendChild(materialInfoP);

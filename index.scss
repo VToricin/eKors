@@ -1,7 +1,7 @@
 $widthDesktop:1024px;
 $widthPhone:820px;
 $widthSmall:767px;
-$fontFamilyMain: 'Alumni Sans', sans-serif;
+$fontFamilyMain: 'Source Sans Pro', sans-serif;
 
 
 @import './footer/footer.scss';
@@ -32,8 +32,9 @@ p{
     font-family: 'Inter', sans-serif;
     font-family: $fontFamilyMain;
     
-    font-size: 20px;
-    color: rgb(77, 77, 77);
+    font-weight: 300;
+    font-size: 17px;
+    color: rgb(53, 53, 53);
     
 
 }

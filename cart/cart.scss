@@ -89,13 +89,13 @@
             }
 
             .headInput{
-                width: 130px;
+                width: 140px;
                 margin: 0px 10px;
                 font-family: 'Coda', cursive;
                 font-family: 'Inter', sans-serif;
                 font-family: $fontFamilyMain;
                 color: rgb(57, 57, 57);
-                font-size: 20px;
+                font-size: 17px;
                 border-radius: 5px;
                 border: 1px solid darkgrey;
                 @media(max-width:$widthDesktop){
@@ -206,7 +206,7 @@
             font-family: 'Inter', sans-serif;
             font-family: $fontFamilyMain;
             margin: 0px;
-            font-size: 20px;
+            font-size: 17px;
 
             @media(max-width:$widthDesktop){
                 width: 80%;
@@ -222,9 +222,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: "Alumni Sans", sans-serif;
+            font-family: $fontFamilyMain;
             transition: 300ms ease;
-            font-size: 20px;
+            font-size: 17px;
             cursor: pointer;
             border: solid 0px;
 
